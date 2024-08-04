@@ -1,4 +1,4 @@
-package rpg_game;
+
 
 public abstract class Character {
 	private String name;
@@ -18,13 +18,16 @@ public abstract class Character {
 	}
 	
 	public void takeDamage(double damagePoints) {
-		System.out.println(this.name + " possui " + this.healthPoints + " pontos de vida.");
-
 		this.healthPoints -= damagePoints;
 		System.out.println(this.name + " sofreu " + damagePoints + " de ano.");
 		
 		if (this.healthPoints <= 0) {
 			System.out.println(this.name + " morreu.");
+
+			if (this instanceof Player){
+				System.exit(0);
+			}
+			
 			return;
 		} 
 		
@@ -44,9 +47,8 @@ public abstract class Character {
 		System.out.println(this.name + " possui " + this.healthPoints + " pontos de vida.");
 	}
 
-	// To-do> adicionar um sistema de morte do personagem;
 	public void attack(Character target) {
-		System.out.println(this.getName() + " realizou um ataque!");
+		System.out.println("> "+ this.getName() + " realizou um ataque!");
 		target.takeDamage(this.attackPower);
 	}
 	
