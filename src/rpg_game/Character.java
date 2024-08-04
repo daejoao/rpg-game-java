@@ -1,14 +1,16 @@
 package rpg_game;
 
 public abstract class Character {
-	protected String name;
-	protected double healthPoints;
-	protected double attackPower;
-	protected double maxHealthPoints = 30;
+	private String name;
+	private double healthPoints;
+	private double attackPower;
+	private double maxHealthPoints;
 	
-	public Character(String name) {
+	public Character(String name, double attackPower, double maxHealthPoints) {
 		this.name = name;
-		this.healthPoints = this.maxHealthPoints;
+		this.attackPower = attackPower;
+		this.maxHealthPoints = maxHealthPoints;
+		this.healthPoints = maxHealthPoints;
 	}
 	
 	public String getName() {
@@ -41,8 +43,13 @@ public abstract class Character {
 		
 		System.out.println(this.name + " possui " + this.healthPoints + " pontos de vida.");
 	}
+
+	// To-do> adicionar um sistema de morte do personagem;
+	public void attack(Character target) {
+		System.out.println(this.getName() + " realizou um ataque!");
+		target.takeDamage(this.attackPower);
+	}
 	
-	// Optional
 	public double getHealthPoints() {
 		return this.healthPoints;
 	}
