@@ -41,9 +41,18 @@ public class BattleSystem {
 				isBattleOngoing = false;
 			}
 
-			// isBattleOngoing = true;
-		}
+			// Turno do inimigo
+			for (Map.Entry<String, Enemy> enemy: enemies.entrySet()) {
+				enemy.getValue().attack(player);
 
+				if (!player.isAlive) {
+					System.out.println(player.getName() + " foi derrotado por " + enemy.getValue().getName());
+
+					isBattleOngoing = false;
+					break;
+				}
+			}
+		}
 	}
 
 	private void printAllBattleEnemies(HashMap<String, Enemy> enemies) {
