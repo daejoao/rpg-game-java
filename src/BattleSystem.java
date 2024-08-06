@@ -29,8 +29,19 @@ public class BattleSystem {
 			System.out.println("> " + player.getName() + " decidiu atacar " + enemyToAttack.getName());
 
 			player.attack(enemyToAttack);
-			
-			isBattleOngoing = false;
+
+			// Valida se inimigos estão vivos
+			if (!enemyToAttack.isAlive) {
+				enemies.remove(enemyChosen);
+				System.out.println("> " + player.getName() + " derrotou " + enemyToAttack.getName() + "!");
+			}
+
+			if (enemies.isEmpty()) {
+				System.out.println("> " + player.getName() + " derrotou todos os inimigos!");
+				isBattleOngoing = false;
+			}
+
+			// isBattleOngoing = true;
 		}
 
 	}
