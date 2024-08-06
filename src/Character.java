@@ -1,10 +1,9 @@
-
-
 public abstract class Character {
 	private String name;
 	private double healthPoints;
 	private double attackPower;
 	private double maxHealthPoints;
+	public boolean isAlive = true;
 	
 	public Character(String name, double attackPower, double maxHealthPoints) {
 		this.name = name;
@@ -24,9 +23,13 @@ public abstract class Character {
 		if (this.healthPoints <= 0) {
 			System.out.println(this.name + " morreu.");
 
-			if (this instanceof Player){
-				System.exit(0);
-			}
+			// To-do: transferir esta lógica para classe BattleSystem?
+			// if (this instanceof Player){
+			// 	System.out.println(this.getName() + " foi derrotado!");
+			// 	System.exit(0);
+			// }
+
+			this.isAlive = false;
 			
 			return;
 		} 
