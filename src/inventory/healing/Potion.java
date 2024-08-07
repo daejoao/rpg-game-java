@@ -8,7 +8,7 @@ public class Potion implements HealingItem {
   }
 
   public String getDescription() {
-    return "Uma poção mágica que restaura 5 pontos de vida do jogador, curando ferimentos e revitalizando o corpo. Essencial para aventuras e batalhas.";
+    return "Uma poção mágica que restaura 10 pontos de vida do jogador, curando ferimentos e revitalizando o corpo. Essencial para aventuras e batalhas.";
   }
 
   public double getHealingAmount() {
