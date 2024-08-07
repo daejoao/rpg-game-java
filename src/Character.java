@@ -23,22 +23,18 @@ public abstract class Character {
 		if (this.healthPoints <= 0) {
 			System.out.println(this.name + " morreu.");
 
-			// To-do: transferir esta lógica para classe BattleSystem?
-			// if (this instanceof Player){
-			// 	System.out.println(this.getName() + " foi derrotado!");
-			// 	System.exit(0);
-			// }
-
 			this.isAlive = false;
-			
-			return;
-		} 
-		
-		System.out.println(this.name + " agora possui " + this.healthPoints + " pontos de vida.");
+		} else {
+			System.out.println(this.name + " agora possui " + this.healthPoints + " pontos de vida.");
+		}
 	}
 	
 	public void recoverLife(double recoverHealthPoints) {
 		this.healthPoints += recoverHealthPoints;
+		
+		if (this.healthPoints > this.maxHealthPoints) {
+			this.healthPoints = this.maxHealthPoints;
+		}
 		
 		System.out.println(this.name + " recuperou " + recoverHealthPoints + " pontos de vida.");
 		
