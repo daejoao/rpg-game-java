@@ -1,8 +1,11 @@
 package inventory.healing;
 
 public class Elixir implements HealingItem {
-  private double healingAmount = 100;
+  private double healingAmount;
 
+  public Elixir() {
+    this.healingAmount = 100;
+  }
   public String getName() {
     return "Elixir";
   }

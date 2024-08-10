@@ -1,7 +1,11 @@
 package inventory.healing;
 
 public class SpecialCheese implements HealingItem {
-  private double healingAmount = 5;
+  private double healingAmount;
+
+  public SpecialCheese() {
+    this.healingAmount = 5;
+  }
 
   public String getName() {
     return "Queijo Especial";

@@ -1,7 +1,11 @@
 package inventory.healing;
 
 public class Potion implements HealingItem {
-  private double healingAmount = 10;
+  private double healingAmount;
+
+  public Potion() {
+    this.healingAmount = 10;
+  }
 
   public String getName() {
     return "Poção de cura";
