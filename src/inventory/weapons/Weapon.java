@@ -1,5 +1,7 @@
 package inventory.weapons;
 
-public interface Weapon {
+import inventory.Item;
+
+public interface Weapon extends Item {
   double getAttackPower();
 }
