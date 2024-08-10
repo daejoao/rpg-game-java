@@ -1,9 +1,11 @@
 import java.util.Scanner;
 import inventory.healing.*;
+import inventory.weapons.Weapon;
 import inventory.Inventory;
 public class Player extends Character {
 	Scanner scanner = new Scanner(System.in);
 	public Inventory inventory = new Inventory();
+	public Weapon currentWeapon;
 
 	public Player(String name) {
 		super(name, 5, 30);
@@ -25,6 +27,14 @@ public class Player extends Character {
 			}
 		} while (healingItem == null);
 
+		System.out.println("> " + this.getName() + " usou " + healingItem.getName());
 		this.recoverLife(healingItem.getHealingAmount());
+	}
+
+	public void equipWeapon(Integer weaponId) {
+		Weapon weapon = this.inventory.getWeapon(weaponId);
+
+		this.currentWeapon = weapon;
+		this.attackPower += weapon.getAttackPower();
 	}
 }

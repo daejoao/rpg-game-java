@@ -1,7 +1,7 @@
 public abstract class Character {
 	private String name;
 	private double healthPoints;
-	private double attackPower;
+	protected double attackPower;
 	private double maxHealthPoints;
 	public boolean isAlive = true;
 	
