@@ -43,7 +43,7 @@ public class BattleSystem {
 			}
 
 			if (enemies.isEmpty()) {
-				System.out.println("> " + player.getName() + " derrotou todos os inimigos e conquistou $" + goldGainedInBattle + " de ouro na batalha!");
+				System.out.println("> " + player.getName() + " derrotou todos os inimigos e conquistou $" + goldGainedInBattle + " de ouro na batalha! \n");
 				
 				player.addGold(goldGainedInBattle);
 				isBattleOngoing = false;
@@ -65,9 +65,15 @@ public class BattleSystem {
 
 	private void printAllBattleEnemies(HashMap<String, Enemy> enemies) {
 		System.out.println("\n--------- Inimigos ---------");
+		
 		for (Map.Entry<String, Enemy> enemy : enemies.entrySet()){
-			System.out.println("> " + enemy.getValue().getName() + " (" + enemy.getValue().getHealthPoints() + "HP)");
+			String enemyName = enemy.getValue().getName();
+			double enemyCurrentHP = enemy.getValue().getHealthPoints();
+			double enemyMaxHP = enemy.getValue().getMaxHealthPoints();
+
+			System.out.println("> " + enemyName + " (" + enemyCurrentHP + "/" + enemyMaxHP + " HP)");
 		}
+
 		System.out.println("____________________________");
 	}
 }
