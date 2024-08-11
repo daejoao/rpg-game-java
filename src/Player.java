@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 import inventory.healing.*;
 import inventory.weapons.Weapon;
@@ -10,34 +11,38 @@ public class Player extends Character {
 	private Integer gold;
 
 	public Player(String name) {
-		super(name, 5, 30);
+		super(name, 5, 50);
 
 		this.gold = 0;
 	}
 
 	public void useHealingItem() {
-		HealingItem healingItem;
-		
-		do {
-			this.inventory.seeHealingItens();
+		List<HealingItem> healingItems = this.inventory.getAllHealingItens();
 
-			System.out.println("Digite o ID de um item para usá-lo: ");
-			Integer itemId = scanner.nextInt();
+		if (!healingItems.isEmpty()) {
+			System.out.println("Você não itens de cura");
+		} else {
+			HealingItem chosenHealingItem;
+			
+			do {
+				this.inventory.seeHealingItens();
 
-			healingItem = this.inventory.getHealingItem(itemId);
+				System.out.println("Digite o ID de um item para usá-lo: ");
+				Integer itemId = scanner.nextInt();
 
-			if (healingItem == null) {
-				System.out.println("Escolha outro: ");
-			}
-		} while (healingItem == null);
+				chosenHealingItem = this.inventory.getHealingItem(itemId);
 
-		System.out.println("> " + this.getName() + " usou " + healingItem.getName());
-		this.recoverLife(healingItem.getHealingAmount());
+				if (chosenHealingItem == null) {
+					System.out.println("Escolha outro: ");
+				}
+			} while (chosenHealingItem == null);
+
+			System.out.println("> " + this.getName() + " usou " + chosenHealingItem.getName());
+			this.recoverLife(chosenHealingItem.getHealingAmount());
+		}
 	}
 
 	public void equipWeapon(Weapon weapon) {
-		// Weapon weapon = this.inventory.getWeapon(weaponId);
-
 		this.currentWeapon = weapon;
 		this.attackPower += weapon.getAttackPower();
 	}
