@@ -1,0 +1,8 @@
+Após derrotar os primeiros inimigos, você segue adiante pela masmorra e se depara com uma cena intrigante. 
+À frente, um prisioneiro muito mais velho está lutando desesperadamente contra um esqueleto. 
+O velho está visivelmente cansado e em clara desvantagem, sua respiração ofegante e seus movimentos lentos 
+revelam o quanto ele está exausto. O esqueleto avança com uma força fria e implacável, atacando sem piedade. 
+Você observa a batalha, sabendo que tem duas opções: 
+1. Ajudar o velho e enfrentar o esqueleto junto com ele. 
+2. Apenas assistir à cena, sem intervir. 
+O que você decide fazer?
