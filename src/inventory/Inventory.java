@@ -37,6 +37,8 @@ public class Inventory {
 
         System.out.println("> [" + healingItemID + "] " + healingItem.getName());
       }
+    } else {
+      System.out.println("Você não tem itens de cura");
     }
   }
 
@@ -80,5 +82,9 @@ public class Inventory {
 
       return null;
     }
+  }
+
+  public List<HealingItem> getAllHealingItens() {
+    return this.healingItens;
   }
 }
