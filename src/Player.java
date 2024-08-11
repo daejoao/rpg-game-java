@@ -2,10 +2,12 @@ import java.util.Scanner;
 import inventory.healing.*;
 import inventory.weapons.Weapon;
 import inventory.Inventory;
+
 public class Player extends Character {
 	Scanner scanner = new Scanner(System.in);
 	public Inventory inventory = new Inventory();
 	public Weapon currentWeapon;
+	private Integer gold;
 
 	public Player(String name) {
 		super(name, 5, 30);
@@ -36,5 +38,13 @@ public class Player extends Character {
 
 		this.currentWeapon = weapon;
 		this.attackPower += weapon.getAttackPower();
+	}
+
+	public Integer getTotalGold() {
+		return this.gold;
+	}
+
+	public void addGold(Integer gold) {
+		this.gold += gold;
 	}
 }

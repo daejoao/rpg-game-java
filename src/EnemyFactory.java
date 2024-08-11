@@ -1,6 +1,19 @@
+import java.util.Random;
+
 class Enemy extends Character {
-  public Enemy(String name, double attackPower, double maxHealthPoints){
+  private Integer maxGoldDrop;
+
+  public Enemy(String name, double attackPower, double maxHealthPoints, Integer maxGoldDrop){
     super(name, attackPower, maxHealthPoints);
+
+    this.maxGoldDrop = maxGoldDrop;
+  }
+
+  public Integer dropGold() {
+    Random random = new Random();
+		Integer goldDrop = random.nextInt((this.maxGoldDrop - 1) + 1) + 1;
+    
+		return goldDrop;
   }
 }
 
@@ -8,20 +21,22 @@ public class EnemyFactory {
   public Enemy createEnemy(String enemyType) {
     switch (enemyType){
       case "Goblin":
-        return new Enemy("Goblin", 5, 15);
+        return new Enemy("Goblin", 5, 15, 10);
       case "Skeleton":
-        return new Enemy("Skeleton", 7, 3);
+        return new Enemy("Esqueleto", 6, 3, 8);
       case "Undead":
-        return new Enemy("Undead", 6, 20);
+        return new Enemy("Morto-vivo", 6, 20, 12);
       case "Giant spider":
-        return new Enemy("Giant spider", 4, 25);
+        return new Enemy("Aranha gigante", 4, 20, 11);
       case "Bandit":
-        return new Enemy("Bandit", 5, 18);
+        return new Enemy("Bandido", 5, 18, 10);
       case "Wolf":
-        return new Enemy("Wolf", 8, 12);
+        return new Enemy("Lobo", 7, 12, 9);
+      case "Rat":
+        return new Enemy("Rato gigante", 2, 3, 5);
       case "Bat":
       default:
-        return new Enemy("Bat", 2, 1);
+        return new Enemy("Morcego", 2, 1, 4);
     }
   }
 }
