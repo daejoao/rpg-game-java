@@ -12,8 +12,8 @@ public class BattleSystem {
 		System.out.println(player.getName() + " entrou em uma batalha!");
 		while (isBattleOngoing) {
 			// Turno do jogador
-			System.out.println("Sua vez! Digite o nome do inimigo que queira atacar:");
 			this.printAllBattleEnemies(enemies);
+			System.out.println("Sua vez! Digite o nome do inimigo que queira atacar:");
 
 			boolean enemyExistsInBattle;
 			String enemyChosen;
@@ -64,8 +64,10 @@ public class BattleSystem {
 	}
 
 	private void printAllBattleEnemies(HashMap<String, Enemy> enemies) {
+		System.out.println("\n--------- Inimigos ---------");
 		for (Map.Entry<String, Enemy> enemy : enemies.entrySet()){
 			System.out.println("> " + enemy.getValue().getName() + " (" + enemy.getValue().getHealthPoints() + "HP)");
 		}
+		System.out.println("____________________________");
 	}
 }

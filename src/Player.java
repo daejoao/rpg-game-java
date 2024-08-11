@@ -11,6 +11,8 @@ public class Player extends Character {
 
 	public Player(String name) {
 		super(name, 5, 30);
+
+		this.gold = 0;
 	}
 
 	public void useHealingItem() {
@@ -33,8 +35,8 @@ public class Player extends Character {
 		this.recoverLife(healingItem.getHealingAmount());
 	}
 
-	public void equipWeapon(Integer weaponId) {
-		Weapon weapon = this.inventory.getWeapon(weaponId);
+	public void equipWeapon(Weapon weapon) {
+		// Weapon weapon = this.inventory.getWeapon(weaponId);
 
 		this.currentWeapon = weapon;
 		this.attackPower += weapon.getAttackPower();
