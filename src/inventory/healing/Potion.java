@@ -4,7 +4,7 @@ public class Potion implements HealingItem {
   private double healingAmount;
 
   public Potion() {
-    this.healingAmount = 10;
+    this.healingAmount = 30;
   }
 
   public String getName() {
@@ -12,7 +12,7 @@ public class Potion implements HealingItem {
   }
 
   public String getDescription() {
-    return "Uma poção mágica que restaura 10 pontos de vida do jogador, curando ferimentos e revitalizando o corpo. Essencial para aventuras e batalhas.";
+    return "Uma poção mágica que restaura 30 pontos de vida do jogador, curando ferimentos e revitalizando o corpo.";
   }
 
   public double getHealingAmount() {

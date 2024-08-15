@@ -4,7 +4,7 @@ public class SpecialCheese implements HealingItem {
   private double healingAmount;
 
   public SpecialCheese() {
-    this.healingAmount = 5;
+    this.healingAmount = 15;
   }
 
   public String getName() {
@@ -12,7 +12,7 @@ public class SpecialCheese implements HealingItem {
   }
 
   public String getDescription() {
-    return "Um queijo raro e de sabor intenso que restaura 5 pontos de vida. Ideal para uma recuperação rápida e eficaz durante aventuras desafiadoras";
+    return "Um queijo raro e de sabor intenso que restaura 15 pontos de vida.";
   }
 
   public double getHealingAmount() {
