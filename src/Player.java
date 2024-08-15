@@ -11,7 +11,7 @@ public class Player extends Character {
 	private Integer gold;
 
 	public Player(String name) {
-		super(name, 5, 50);
+		super(name, 8, 40);
 
 		this.gold = 0;
 	}
@@ -19,7 +19,7 @@ public class Player extends Character {
 	public void useHealingItem() {
 		List<HealingItem> healingItems = this.inventory.getAllHealingItens();
 
-		if (!healingItems.isEmpty()) {
+		if (healingItems.isEmpty()) {
 			System.out.println("Você não itens de cura");
 		} else {
 			HealingItem chosenHealingItem;
