@@ -32,10 +32,10 @@ public class Inventory {
     if (!this.healingItens.isEmpty()){
       System.out.println("[ Items de Cura ]");
 
-      for (Item healingItem : this.healingItens) {
+      for (HealingItem healingItem : this.healingItens) {
         int healingItemID = this.healingItens.indexOf(healingItem);
 
-        System.out.println("> [" + healingItemID + "] " + healingItem.getName());
+        System.out.println("> [" + healingItemID + "] " + healingItem.getName() + " | " + healingItem.getDescription());
       }
     } else {
       System.out.println("Você não tem itens de cura");
