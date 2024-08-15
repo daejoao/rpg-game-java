@@ -11,7 +11,7 @@ public class Elixir implements HealingItem {
   }
 
   public String getDescription() {
-    return "Um elixir raro que restaura completamente a saúde do usuário, curando todos os pontos de vida de uma só vez. Ideal para emergências críticas.";
+    return "Um elixir raro que restaura completamente a saúde do usuário, curando todos os pontos de vida de uma só vez.";
   }
 
   public double getHealingAmount() {
