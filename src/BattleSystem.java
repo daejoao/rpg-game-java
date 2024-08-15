@@ -5,8 +5,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+import logger.Logger;
+
 public class BattleSystem {
 	Scanner scanner = new Scanner(System.in);
+	Logger log = new Logger();
 
   public void startBattle(Player player, HashMap<String, Enemy> enemies) {
 		boolean isBattleOngoing = true;
@@ -14,11 +17,11 @@ public class BattleSystem {
 		List<Integer> playerPossibleChoices = Arrays.asList(1, 2);
 		Integer playerChoice;
 
-		System.out.println(player.getName() + " entrou em uma batalha!");
+		log.printWithDelay(player.getName() + " entrou em uma batalha!", 5);
 		while (isBattleOngoing) {
 			// Turno do jogador
 			this.printBattleScreen(player, enemies);
-			System.out.println("Sua vez! Digite o número da ação que queira realizar:");
+			log.printWithDelay("Sua vez! Digite o número da ação que queira realizar:", 5);
 
 			do {
 				try {
@@ -38,17 +41,17 @@ public class BattleSystem {
 						scanner.nextLine();
 
 						do {	
-							System.out.println("Digite o nome do inimigo que queira atacar:");
+							log.printWithDelay("Digite o nome do inimigo que queira atacar:", 5);
 							enemyChosen = scanner.nextLine().toUpperCase();
 							enemyExistsInBattle = enemies.containsKey(enemyChosen);
 			
 							if (!enemyExistsInBattle) {
-								System.out.println("Este inimigo não está presente na batalha, escolha outro!");
+								log.printWithDelay("Este inimigo não está presente na batalha, escolha outro!", 5);
 							}
 						} while (!enemyExistsInBattle);
 			
 						Enemy enemyToAttack = enemies.get(enemyChosen);
-						System.out.println("> " + player.getName() + " decidiu atacar " + enemyToAttack.getName());
+						log.printWithDelay("> " + player.getName() + " decidiu atacar " + enemyToAttack.getName(), 5);
 			
 						player.attack(enemyToAttack);
 
@@ -59,8 +62,8 @@ public class BattleSystem {
 							Integer goldDropped = enemyToAttack.dropGold();
 							goldGainedInBattle += goldDropped;
 
-							System.out.println("> " + player.getName() + " derrotou " + enemyToAttack.getName() + "!");
-							System.out.println("> " + enemyToAttack.getName() + " dropou $" + goldDropped + " de ouro!");
+							log.printWithDelay("> " + player.getName() + " derrotou " + enemyToAttack.getName() + "!", 5);
+							log.printWithDelay("> " + enemyToAttack.getName() + " dropou $" + goldDropped + " de ouro!", 5);
 						}
 
 						break;
@@ -74,8 +77,8 @@ public class BattleSystem {
 			
 			
 			if (enemies.isEmpty()) {
-				System.out.println("> " + player.getName() + " derrotou todos os inimigos e conquistou $" + goldGainedInBattle + " de ouro na batalha! \n");
-				
+				log.printWithDelay("> " + player.getName() + " derrotou todos os inimigos e conquistou $" + goldGainedInBattle + " de ouro na batalha! \n", 10);
+
 				player.addGold(goldGainedInBattle);
 				isBattleOngoing = false;
 			}
@@ -85,10 +88,10 @@ public class BattleSystem {
 				enemy.getValue().attack(player);
 
 				if (!player.isAlive) {
-					System.out.println(player.getName() + " foi derrotado por " + enemy.getValue().getName());
+					log.printWithDelay(player.getName() + " foi derrotado por " + enemy.getValue().getName(), 15);
 
-					isBattleOngoing = false;
-					break;
+					log.printWithDelay("--- Fim de jogo! ---", 15);
+					System.exit(0);
 				}
 			}
 		}

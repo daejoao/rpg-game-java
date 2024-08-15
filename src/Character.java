@@ -1,3 +1,5 @@
+import logger.Logger;
+
 public abstract class Character {
 	private String name;
 	private double healthPoints;
@@ -5,6 +7,8 @@ public abstract class Character {
 	private double maxHealthPoints;
 	public boolean isAlive = true;
 	
+	Logger log = new Logger();
+
 	public Character(String name, double attackPower, double maxHealthPoints) {
 		this.name = name;
 		this.attackPower = attackPower;
@@ -18,14 +22,15 @@ public abstract class Character {
 	
 	public void takeDamage(double damagePoints) {
 		this.healthPoints -= damagePoints;
-		System.out.println(this.name + " sofreu " + damagePoints + " de ano.");
+		log.printWithDelay(this.name + " sofreu " + damagePoints + " de ano.", 5);
+
 		
 		if (this.healthPoints <= 0) {
-			System.out.println(this.name + " morreu.");
+			log.printWithDelay(this.name + " morreu.",10);
 
 			this.isAlive = false;
 		} else {
-			System.out.println(this.name + " agora possui " + this.healthPoints + " pontos de vida.");
+			log.printWithDelay(this.name + " agora possui " + this.healthPoints + " pontos de vida.", 5);
 		}
 	}
 	
@@ -36,10 +41,10 @@ public abstract class Character {
 			this.healthPoints = this.maxHealthPoints;
 		}
 		
-		System.out.println(this.name + " recuperou " + recoverHealthPoints + " pontos de vida.");
+		log.printWithDelay(this.name + " recuperou " + recoverHealthPoints + " pontos de vida.", 5);
 		
 		if (this.healthPoints == this.maxHealthPoints) {
-			System.out.println(this.name + " agora está com a vida máxima!");
+			log.printWithDelay(this.name + " agora está com a vida máxima!", 10);
 			return;
 		}
 		
@@ -47,7 +52,7 @@ public abstract class Character {
 	}
 
 	public void attack(Character target) {
-		System.out.println("> "+ this.getName() + " realizou um ataque!");
+		log.printWithDelay("> "+ this.getName() + " realizou um ataque!", 5);
 		target.takeDamage(this.attackPower);
 	}
 	
