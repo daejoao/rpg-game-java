@@ -40,7 +40,7 @@ Projeto desenvolvido para aplicar os conceitos de POO, da cadeira de Programaç�
   </li>
   <li>
     <p>
-      <b> Tratamento de exceções </b> no método 'readFileText' da classe FileManager, utilizamos um bloco try/catch para tratar possíveis erros na leitura dos arquivos. Realizamos tratamento de exceções nos métodos 'getHealingItem' e 'getWeapon' da classe Inventory.
+      <b> Tratamento de exceções </b> no método 'readFileText' da classe FileManager, utilizamos um bloco try/catch para tratar possíveis erros na leitura dos arquivos. Também realizamos o tratamento de exceções nos métodos 'getHealingItem' e 'getWeapon' da classe Inventory.
     </p>
   </li>
 </ul>
