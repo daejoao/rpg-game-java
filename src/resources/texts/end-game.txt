@@ -1,10 +1,10 @@
-Após a batalha final, o jogador se encontra exausto, com o corpo marcado pelas lutas. 
-O guerreiro caído aos seus pés, o lobo derrotado ao lado, respira pesadamente pela última vez antes de ceder. 
-O silêncio que se segue é denso, quase palpável, enquanto o jogador ergue a cabeça e encara a saída para o mundo externo. 
-A luz fraca do lado de fora contrasta com a escuridão da masmorra, sinalizando o fim de uma longa jornada.
+Apos a batalha final, o jogador se encontra exausto, com o corpo marcado pelas lutas. 
+O guerreiro caido aos seus pes, o lobo derrotado ao lado, respira pesadamente pela ultima vez antes de ceder. 
+O silencio que se segue eh denso, quase palpavel, enquanto o jogador ergue a cabeca e encara a saida para o mundo externo. 
+A luz fraca do lado de fora contrasta com a escuridao da masmorra, sinalizando o fim de uma longa jornada.
 
-Finalmente, a liberdade está ao alcance, mas o peso das batalhas ainda ecoa em sua mente. 
-Cada passo em direção à saída é uma vitória, e ao atravessá-la, o jogador sente a brisa fresca no rosto, uma sensação de alívio e triunfo o invade. 
-O mundo lá fora espera, mas ele jamais esquecerá o que enfrentou nas profundezas sombrias daquela masmorra.
+Finalmente, a liberdade esta ao alcance, mas o peso das batalhas ainda ecoa em sua mente. 
+Cada passo em direcao a saida eh uma vitoria, e ao atravessa-la, o jogador sente a brisa fresca no rosto, uma sensacao de alivio e triunfo o invade. 
+O mundo la fora espera, mas ele jamais esquecera o que enfrentou nas profundezas sombrias daquela masmorra.
 
 --- Fim de jogo! ---

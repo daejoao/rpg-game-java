@@ -8,11 +8,11 @@ public class Potion implements HealingItem {
   }
 
   public String getName() {
-    return "Poção de cura";
+    return "Pocao de cura";
   }
 
   public String getDescription() {
-    return "Uma poção mágica que restaura 30 pontos de vida do jogador, curando ferimentos e revitalizando o corpo.";
+    return "Uma pocao magica que restaura 30 pontos de vida do jogador, curando ferimentos e revitalizando o corpo.";
   }
 
   public double getHealingAmount() {

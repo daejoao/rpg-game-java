@@ -20,14 +20,14 @@ public class Player extends Character {
 		List<HealingItem> healingItems = this.inventory.getAllHealingItens();
 
 		if (healingItems.isEmpty()) {
-			System.out.println("Você não itens de cura");
+			System.out.println("Voce nao itens de cura");
 		} else {
 			HealingItem chosenHealingItem;
 			
 			do {
 				this.inventory.seeHealingItens();
 
-				System.out.println("Digite o ID de um item para usá-lo: ");
+				System.out.println("Digite o ID de um item para usa-lo: ");
 				Integer itemId = scanner.nextInt();
 
 				chosenHealingItem = this.inventory.getHealingItem(itemId);

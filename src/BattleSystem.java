@@ -21,13 +21,13 @@ public class BattleSystem {
 		while (isBattleOngoing) {
 			// Turno do jogador
 			this.printBattleScreen(player, enemies);
-			log.printWithDelay("Sua vez! Digite o número da ação que queira realizar:", 5);
+			log.printWithDelay("Sua vez! Digite o numero da acao que queira realizar:", 5);
 
 			do {
 				try {
 						playerChoice = scanner.nextInt();
 				} catch (InputMismatchException e) {
-						System.out.println("Entrada inválida! Por favor, digite um número.");
+						System.out.println("Entrada invalida! Por favor, digite um numero.");
 						playerChoice = null;
 
 						scanner.next(); 
@@ -46,7 +46,7 @@ public class BattleSystem {
 							enemyExistsInBattle = enemies.containsKey(enemyChosen);
 			
 							if (!enemyExistsInBattle) {
-								log.printWithDelay("Este inimigo não está presente na batalha, escolha outro!", 5);
+								log.printWithDelay("Este inimigo nao esta presente na batalha, escolha outro!", 5);
 							}
 						} while (!enemyExistsInBattle);
 			
@@ -71,7 +71,7 @@ public class BattleSystem {
 						player.useHealingItem();
 						break;
 					default:
-						System.out.println("Ação inválida, escolha novamente:");
+						System.out.println("Acao invalida, escolha novamente:");
 				}
 			} while (!playerPossibleChoices.contains(playerChoice));
 			

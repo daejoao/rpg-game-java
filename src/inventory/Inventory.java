@@ -38,7 +38,7 @@ public class Inventory {
         System.out.println("> [" + healingItemID + "] " + healingItem.getName() + " | " + healingItem.getDescription());
       }
     } else {
-      System.out.println("Você não tem itens de cura");
+      System.out.println("Voce nao tem itens de cura");
     }
   }
 
@@ -63,7 +63,7 @@ public class Inventory {
       return healingItem;
     } catch (Exception err) {
       if (err instanceof IndexOutOfBoundsException) {
-        System.out.println("Este item não existe no inventário...");
+        System.out.println("Este item nao existe no inventario...");
       }
 
       return null;
@@ -77,7 +77,7 @@ public class Inventory {
       return weapon;
     } catch (Exception err) {
       if (err instanceof IndexOutOfBoundsException) {
-        System.out.println("Esta arma não existe no inventário...");
+        System.out.println("Esta arma nao existe no inventario...");
       }
 
       return null;

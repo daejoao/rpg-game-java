@@ -1,11 +1,11 @@
-Após a batalha intensa contra o esqueleto, você se volta para o velho prisioneiro, que está deitado no chão, gravemente ferido. 
-Com um esforço visível, o velho ergue a cabeça e olha para você com um olhar cheio de gratidão e tristeza. 
+Apos a batalha intensa contra o esqueleto, voce se volta para o velho prisioneiro, que esta deitado no chao, gravemente ferido. 
+Com um esforco visivel, o velho ergue a cabeca e olha para voce com um olhar cheio de gratidao e tristeza. 
 "Obrigado... obrigado por ter lutado ao meu lado", ele diz com uma voz fraca.
-"Você fez mais do que eu poderia esperar. Se eu tivesse mais tempo... talvez eu pudesse ter feito algo a mais." 
-"Mas agora, é tarde demais para mim. Eu quero que você tenha isso", ele diz, entregando a espada com um gesto cansado. 
-"Esta espada... ela já foi minha fiel companheira em muitas batalhas. Pode ser de grande ajuda para você."
-"E esta poção", ele continua, tirando uma pequena frasco de seu bolso, 
-"é algo que roubei de um dos guardas. Use-a bem. É a única coisa que posso deixar para ajudá-lo."
-"Cuide-se e continue lutando. O caminho à frente é perigoso, mas com coragem e determinação, você pode conseguir."
+"Voce fez mais do que eu poderia esperar. Se eu tivesse mais tempo... talvez eu pudesse ter feito algo a mais." 
+"Mas agora, eh tarde demais para mim. Eu quero que voce tenha isso", ele diz, entregando a espada com um gesto cansado. 
+"Esta espada... ela ja foi minha fiel companheira em muitas batalhas. Pode ser de grande ajuda para voce."
+"E esta pocao", ele continua, tirando uma pequena frasco de seu bolso, 
+"eh algo que roubei de um dos guardas. Use-a bem. Eh a unica coisa que posso deixar para ajuda-lo."
+"Cuide-se e continue lutando. O caminho a frente eh perigoso, mas com coragem e determinacao, voce pode conseguir."
 "Adeus... e obrigado novamente." 
-Com um último suspiro, o velho fecha os olhos, deixando você com a espada e a poção.
+Com um ultimo suspiro, o velho fecha os olhos, deixando voce com a espada e a pocao.

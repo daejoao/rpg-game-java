@@ -38,7 +38,7 @@ public class Main {
 		player.inventory.storeItem(knife);
 		player.equipWeapon(knife);
 		
-		log.printWithDelay("> Você equipa a faca e guarda a chave em seu bolso! \n", 5);
+		log.printWithDelay("> Voce equipa a faca e guarda a chave em seu bolso! \n", 5);
 
 		String escapeAttempt = fileManager.readFileText("./src/resources/texts/escape-attempt.txt");
 		log.printWithDelay(escapeAttempt, 10);
@@ -80,7 +80,7 @@ public class Main {
 				player.inventory.storeItem(sword);
 				player.equipWeapon(sword);
 		
-				log.printWithDelay("> Você equipa a espada e guarda a poção no seu inventário! \n", 5);
+				log.printWithDelay("> Voce equipa a espada e guarda a pocao no seu inventario! \n", 5);
 			} else if (playerChoice == 2) {
 				String dontHelpOldPrisoner = fileManager.readFileText("./src/resources/texts/dont-help-old-prisoner.txt");
 				log.printWithDelay(dontHelpOldPrisoner, 10);
@@ -98,11 +98,11 @@ public class Main {
 				player.inventory.storeItem(sword);
 				player.equipWeapon(sword);
 		
-				log.printWithDelay("> Você equipa a espada!", 5);
+				log.printWithDelay("> Voce equipa a espada!", 5);
 			}
 
 			if (!possibleChoices.contains(playerChoice)) {
-				System.out.println("Escolha inválida. Tente novamente.");
+				System.out.println("Escolha invalida. Tente novamente.");
 			}
 
 		} while (!possibleChoices.contains(playerChoice));
@@ -118,7 +118,7 @@ public class Main {
 		player.inventory.storeItem(healthPotion2);
 		player.inventory.storeItem(specialCheese);
 
-		log.printWithDelay("> Você guarda no seu inventário duas poções de cura e um queijo especial! \n", 5);
+		log.printWithDelay("> Voce guarda no seu inventario duas pocoes de cura e um queijo especial! \n", 5);
 
 		String finalBossScene = fileManager.readFileText("./src/resources/texts/final-boss-scene.txt");
 		log.printWithDelay(finalBossScene, 10);

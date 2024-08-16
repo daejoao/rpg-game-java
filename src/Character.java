@@ -44,7 +44,7 @@ public abstract class Character {
 		log.printWithDelay(this.name + " recuperou " + recoverHealthPoints + " pontos de vida.", 5);
 		
 		if (this.healthPoints == this.maxHealthPoints) {
-			log.printWithDelay(this.name + " agora está com a vida máxima!", 10);
+			log.printWithDelay(this.name + " agora esta com a vida máxima!", 10);
 			return;
 		}
 		
